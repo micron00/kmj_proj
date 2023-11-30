@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> 이너트립 </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="http://workmj.dothome.co.kr/2023_innertrip/css/animate.css" />
+	<link rel="stylesheet" href="http://workmj.dothome.co.kr/2023_innertrip/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="http://workmj.dothome.co.kr/2023_innertrip/css/common.css" />
+	<link rel="stylesheet" href="http://workmj.dothome.co.kr/2023_innertrip/css/pages.css" />
+
+    
+	<script src="http://workmj.dothome.co.kr/2023_innertrip/js/jquery-2.2.4.min.js"></script>
+	<script src="http://workmj.dothome.co.kr/2023_innertrip/js/swiper-bundle.min.js"></script>
+	<script src="http://workmj.dothome.co.kr/2023_innertrip/js/ui.js"></script>
+
+    
+    <!-- NEW START -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        .selected { background-color:#FFFFDF; }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(".tDragDropTr > tbody").sortable({
+                handle:'button.bDragDrop',
+                cancel: '',
+                start:function(event,ui){
+                    ui.item.addClass("selected");
+                },
+                stop:function(event,ui){
+                    ui.item.removeClass("selected");
+                }
+            });
+        })
+
+    </script>
+    <!-- 테이블에 추가된 tDragDropTr class만 드레그드랍이 적용되도록 처리함-->
+    <!-- NEW END -->
+
+</head>
+<body>
+
+
+
+	<div class="container ltr"> <!-- To.개발: 판매자정보 메뉴는 반드시 class="ltr" 추가 -->
+
+		<!-- s: HEADER -->
+		<header class="header_container" id="header_container">
+			<!-- s: BANNER -->
+			<div class="banner_inner">
+				banner
+			</div>
+			<!-- e: BANNER -->
+			<!-- s: HEADER -->
+			<div class="header_inner">
+				header
+			</div>
+			<!-- e: HEADER -->
+			<!-- s: MENU -->
+			<aside class="menu_inner">
+				menu
+			</aside>
+			<!-- e: MENU -->
+			<!-- s: SUB_MENU -->
+			<aside class="subMenu_inner">
+				subMenu
+			</aside>
+			<!-- e: SUB_MENU -->
+		</header>
+		</header>
+		<!-- e: HEADER -->
+
+		<!-- s: SEARCH -->
+		<section class="search_container">
+			검색
+		</section>
+		<!-- e: SEARCH -->
+
+		<!-- s: LNB -->
+		<aside class="lnb_container">
+			<div class="header_wrap">
+				<h2 class="title">판매자정보</h2>
+			</div>
+			<!-- s: menu -->
+			<nav class="menu_wrap">
+				<ul>
+					<li class="m1">
+						<em class="tit">정보관리</em>
+						<ul class="m2">
+							<li><a href="#">계정정보</a></li>
+							<li><a href="#">회사정보</a></li>
+						</ul>
+					</li>
+					<li class="m1">
+						<em class="tit">상품관리</em>
+						<ul class="m2">
+							<li class="on"><a href="#">강의</a></li>
+							<li><a href="#">공간</a></li>
+							<li><a href="#">부가서비스</a></li>
+							<li><a href="#">버스</a></li>
+							<li><a href="#">체험/티켓</a></li>
+							<li><a href="#">키트/물품</a></li>
+						</ul>
+					</li>
+					<li class="m1">
+						<a href="#" class="tit">주문관리</a>
+					</li>
+					<li class="m1">
+						<a href="#" class="tit">판매관리</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- e: menu -->
+		</aside>
+		<!-- e: LNB -->
+
+		<!-- s: BODY -->
+		<div class="body_container mypage_page prdCurrDetail">
+			<main class="body_inner" id="mainContent">
+
+
+
+
+				<div class="main_content">
+
+					<!-- s: 사이트이동경로 -->
+					<div class="breadcrumb">
+						<button type="button" class="btnMenu">메뉴</button>
+						<ol class="inner">
+							<li>판매자정보</li>
+							<li>상품관리</li>
+							<li>강의</li>
+							<li><em>강의 등록</em></li>
+						</ol>
+					</div>
+					<!-- e: 사이트이동경로 -->
+
+
+					<!-- s: header -->
+					<div class="content_header">
+						<h3 class="title">강의 등록</h3>
+					</div>
+					<!-- e: header -->
+
+					<div class="content_body pcOnly">
+
+						<!-- s: tab -->
+						<div class="tab_type01">
+							<ul>
+								<li><a href="#">1. 프로그램 소개</a></li>
+								<li class="on"><a href="#">2. 커리큘럼</a></li>
+								<li><a href="#">3. 가격정보</a></li>
+								<li><a href="#">4. 상세정보</a></li>
+							</ul>
+						</div>
+						<!-- e: tab -->
+					
+						<h4 class="hidden_obj">커리큘럼</h4>
+
+						<!-- s: header -->
+						<div class="content_header">
+							<a href="#" class="btnPrev">이전페이지</a>
+							<h3 class="title">자율형</h3>
+						</div>
+						<!-- e: header -->
+
+						<!-- s: 개요 -->
+						<div class="summary_type01">
+							<div class="item">
+								총 소요시간
+								&nbsp;
+								<span class="txtEntry01 dis tac"><input type="text" disabled="disabled" value="999" /></span>
+								&nbsp;분
+							</div>
+							<p class="txt01">시간은 '10분' 단위로 입력해주세요. 총 소요시간은 자동으로 계산됩니다.</p>
+						</div>
+						<!-- e: 개요 -->
+
+						<!-- s: thead -->
+						<div class="thead_type01">
+							<div class="rBox">
+								<a href="#" class="btnAdd">+ 커리큘럼 추가</a>
+							</div>
+						</div>
+						<!-- e: thead -->
+
+						<!-- s: table -->
+						<div class="table_type01 full line">
+							<div class="t_inner">
+								<table class="tDragDropTr">
+									<colgroup>
+										<col style="width:7%;" />
+										<col style="width:10%;" />
+										<col style="width:22.5%;" />
+										<col style="width:22.5%;" />
+										<col style="width:22.5%;" />
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th></th>
+											<th>시간(분)</th>
+											<th>주제</th>
+											<th>내용</th>
+											<th>부가설명</th>
+											<th>삭제</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<button type="button" class="btn_menu bDragDrop">정렬</button>
+											</td>
+											<td>
+												<div class="txtEntry01 h01 tac"><input type="text" /></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<a href="#" class="btn_type01 c06 h01">삭제하기<i class="del">휴지통</i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button type="button" class="btn_menu bDragDrop">정렬</button>
+											</td>
+											<td>
+												<div class="txtEntry01 h01 tac"><input type="text" /></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<a href="#" class="btn_type01 c06 h01">삭제하기<i class="del">휴지통</i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button type="button" class="btn_menu">정렬</button>
+											</td>
+											<td>
+												<div class="txtEntry01 h01 tac"><input type="text" /></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1">버튼에 .bDragDrop 적용하지 않으면 이동불가</textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<a href="#" class="btn_type01 c06 h01">삭제하기<i class="del">휴지통</i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<button type="button" class="btn_menu bDragDrop">정렬</button>
+											</td>
+											<td>
+												<div class="txtEntry01 h01 tac"><input type="text" /></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<div class="txtArea02"><textarea data-autoresize rows="1"></textarea></div>
+											</td>
+											<td>
+												<a href="#" class="btn_type01 c06 h01">삭제하기<i class="del">휴지통</i></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- e: table -->
+
+						<!-- s: thead -->
+						<div class="tfoot_type01">
+							<div class="lBox">
+								<p class="t_txt01">버튼을 드래그하여 순서를 변경할 수 있습니다.</p>
+							</div>
+						</div>
+						<!-- e: thead -->
+
+						<!-- s: btnAlign -->
+						<div class="btnAlign_type02">
+							<div class="lBox">
+								<a href="#" class="btn_type01 c02">상세페이지 미리보기</a>
+							</div>
+							<div class="rBox">
+								<a href="#" class="btn_type01 c02">저장하기</a>
+								<a href="#" class="btn_type01 c01">검수요청</a>
+							</div>
+						</div>
+						<!-- e: btnAlign -->
+
+					</div>
+
+					<div class="content_body mOnly">
+						<p class="only_type01">PC에서 진행해주세요</p>
+					</div>
+
+				</div>
+
+
+
+			</main>
+		</div>
+		<!-- e: BODY -->
+
+		<!-- s: FOOTER -->
+		<footer class="footer_container">
+			<div class="sub_inner">
+				<div class="s_inner">
+
+					sub
+
+				</div>
+			</div>
+			<div class="footer_inner">
+				<div class="f_inner">
+
+					footer
+
+				</div>
+			</div>
+		</footer>
+		<!-- e: FOOTER -->
+
+	</div>
+
+
+
+</body>
+</html>
